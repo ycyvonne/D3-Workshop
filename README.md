@@ -3,7 +3,7 @@
 ### Resources
 * [Mike Bostock's D3 Workshop Slides](https://bost.ocks.org/mike/d3/workshop/#0)
 * [D3 Inspiration Gallery](https://github.com/d3/d3/wiki/Gallery)
-* [Map Example](https://bl.ocks.org/mbostock/4060606)
+* [Ring Circle Square Example](https://bl.ocks.org/mbostock/1386444)
 
 ### What is D3?
 
@@ -13,7 +13,7 @@ D3 (Data-Driven Documents) is a JavaScript library for making dynamic, interacti
 
 D3 has a bunch of great features that make it a good choice for data visualizations in a web browser. It's also applicable in for general visual interactions with SVGs.
 
-D3...
+Properties of D3:
 * Uses Web Standards
 * Data Driven
 * DOM Manipulation
