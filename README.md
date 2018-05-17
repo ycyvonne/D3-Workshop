@@ -21,19 +21,3 @@ Properties of D3:
 * Preset Types of visualization (graphs, charts, etc.)
 * Custom Visualizations
 * Interaction and animation
-
-
-### Python Simple HTTP Server
-
-To start a simple server, navigate to your starter code folder:
-
-```
-$ cd starter
-```
-
-And then start the server on a port of your choice (this one uses port 8888)
-
-```
-$ python -m SimpleHTTPServer 8888
-```
-
