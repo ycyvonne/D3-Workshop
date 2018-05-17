@@ -13,6 +13,7 @@ D3 (Data-Driven Documents) is a JavaScript library for making dynamic, interacti
 
 D3 has a bunch of great features that make it a good choice for data visualizations in a web browser. It's also applicable in for general visual interactions with SVGs.
 
+D3...
 * Uses Web Standards
 * Data Driven
 * DOM Manipulation
@@ -22,5 +23,17 @@ D3 has a bunch of great features that make it a good choice for data visualizati
 * Interaction and animation
 
 
+### Python Simple HTTP Server
 
+To start a simple server, navigate to your starter code folder:
+
+```
+$ cd starter
+```
+
+And then start the server on a port of your choice (this one uses port 8888)
+
+```
+$ python -m SimpleHTTPServer 8888
+```
 

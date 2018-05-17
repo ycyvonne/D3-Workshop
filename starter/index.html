@@ -1,9 +1,93 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Introduction to D3</title>
-</head>
-<body>
+<meta charset="utf-8">
+<style>
 
+body {
+  background: #888;
+}
+
+rect {
+  fill: none;
+  stroke: #000;
+  stroke-width: 2.5px;
+}
+
+.square:nth-child(2n + 1) rect {
+  stroke: #fff;
+}
+
+</style>
+<body>
+<script src="//d3js.org/d3.v3.min.js"></script>
+<script>
+
+var w = 960,
+    h = 500,
+    start = Date.now();
+
+var rings = [
+  {radius: 65 * 1, width: 16, speed: -3e-2},
+  {radius: 65 * 2, width: 16, speed: -2e-2},
+  {radius: 65 * 3, width: 16, speed: -1e-2},
+  {radius: 65 * 4, width: 16, speed: 1e-2},
+  {radius: 65 * 5, width: 16, speed: 2e-2},
+  {radius: 65 * 6, width: 16, speed: 3e-2}
+];
+
+/**
+ * TODO 1. Create an svg and wrapper for our animation
+ * Steps:
+ * -> Select the body and append an svg to it
+ * -> Set the width attribute to w and the height attribute to h
+ * -> Add a wrapper element to the svg, appropriately centered and scaled
+ */
+
+
+/**
+ * TODO 2. Connect our ring data to actual <g> elements
+ * Steps:
+ * -> Make an "empty" <g> selection on the svg selection
+ * -> Bind our rings data
+ * -> For each of our ring data points, append a <g> element
+ * -> Give each <g> element a class of "ring"
+ * -> Call the function ringEnter on each of the elements
+ */
+
+
+
+d3.timer(function() {
+  var elapsed = Date.now() - start;
+  var rotate = function(d) { return "rotate(" + d.speed * elapsed + ")"; };
+
+  /**
+   * TODO 4. Rotate the rings and squares
+   * Steps:
+   * -> On the ring selection, change its attribute "transform" to the function rotate
+   * -> Change the selection (within the chain) to select rects
+   * -> On this rect selection, change each rect's attribute "transform" to the function rotate
+   */
+});
+
+
+function ringEnter(d, i) {
+  var n = Math.floor(2 * Math.PI * d.radius / d.width * Math.SQRT1_2),
+      k = 360 / n;
+
+  /**
+   * TODO 3. Add squares one each ring
+   */
+
+  d3.select(this).selectAll("g")
+      .data(d3.range(n).map(function() { return d; }))
+    ./*On the enter selection, add <g> elements*/
+      .attr(/*Give each element a class of square*/)
+      .attr("transform", function(_, i) { return "rotate(" + i * k + ")translate(" + d.radius + ")"; })
+    ./*In each <g> element, append a rect*/
+    	/*Set the x and y attributes of the rect so that it's centered*/
+    	/*Set the width and height of the rect according to d.width and d.height*/
+}
+
+</script>
 </body>
 </html>
